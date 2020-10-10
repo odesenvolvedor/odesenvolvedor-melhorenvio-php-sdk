@@ -1,0 +1,30 @@
+{
+	"name": "odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
+	"description": "Integração não-oficial com a Melhor Envio",
+	"keywords": ["melhorenvio", "api", "php", "sdk"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Fernando Campos de Oliveira",
+			"email": "fernando@odesenvolvedor.net"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"MelhorEnvio\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"MelhorEnvio\\Tests\\": "tests"
+		}
+	},
+	"require": {
+		"php": "^7.3",
+		"guzzlehttp/guzzle": "^6.5"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^8.0",
+		"symfony/dotenv": "^5.0"
+	}
+}

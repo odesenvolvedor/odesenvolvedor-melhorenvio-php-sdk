@@ -1,0 +1,24 @@
+<?php 
+
+require_once 'vendor/autoload.php';
+
+$token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImU0YjcyMGRhMzJiNDVlZjdkZjYyY2YzZWE4MGUxNzgyZmMwYTBmZWZmYTM5YTlkMDhiNWZmZjgzMThhMzY4YTM0MWNkMTViNDY1ZWFlZWE1In0.eyJhdWQiOiIxIiwianRpIjoiZTRiNzIwZGEzMmI0NWVmN2RmNjJjZjNlYTgwZTE3ODJmYzBhMGZlZmZhMzlhOWQwOGI1ZmZmODMxOGEzNjhhMzQxY2QxNWI0NjVlYWVlYTUiLCJpYXQiOjE2MDIyOTI2NTAsIm5iZiI6MTYwMjI5MjY1MCwiZXhwIjoxNjMzODI4NjUwLCJzdWIiOiI3NDI5ZDNlMC1hNDc0LTQ3ZDAtOTY4MS0yZTRlMWQ2OTAyNGQiLCJzY29wZXMiOlsiY2FydC1yZWFkIiwiY2FydC13cml0ZSIsImNvbXBhbmllcy1yZWFkIiwiY29tcGFuaWVzLXdyaXRlIiwiY291cG9ucy1yZWFkIiwiY291cG9ucy13cml0ZSIsIm5vdGlmaWNhdGlvbnMtcmVhZCIsIm9yZGVycy1yZWFkIiwicHJvZHVjdHMtcmVhZCIsInByb2R1Y3RzLWRlc3Ryb3kiLCJwcm9kdWN0cy13cml0ZSIsInB1cmNoYXNlcy1yZWFkIiwic2hpcHBpbmctY2FsY3VsYXRlIiwic2hpcHBpbmctY2FuY2VsIiwic2hpcHBpbmctY2hlY2tvdXQiLCJzaGlwcGluZy1jb21wYW5pZXMiLCJzaGlwcGluZy1nZW5lcmF0ZSIsInNoaXBwaW5nLXByZXZpZXciLCJzaGlwcGluZy1wcmludCIsInNoaXBwaW5nLXNoYXJlIiwic2hpcHBpbmctdHJhY2tpbmciLCJlY29tbWVyY2Utc2hpcHBpbmciLCJ0cmFuc2FjdGlvbnMtcmVhZCIsInVzZXJzLXJlYWQiLCJ1c2Vycy13cml0ZSIsIndlYmhvb2tzLXJlYWQiLCJ3ZWJob29rcy13cml0ZSJdfQ.oztgwp7wRmXHt6YASmipRWkT13qTHlcct_0m44vl8ZRtfv9hqtOeq-JCi5nK67QdZU3UJoFZBlnWDopvtdIcLQhgeac4F7pd2bMn5sF2WE0waR7IAR5SUMotOr7wqNRGKtodw0XB6-vFDo8OHGNJkMFqUSpz_tchIBOydck4ZaEDr16BrjiLJTVhSdE16InjG7TOEu4PDFTuT6l9MOvitsA-ZqFEEsFQH0ze7HpBIuPrTESvpyUyZr7tFlPdb-qA33TzjIV3YKE3GTVw1v0iAqL87SN2fO8sDH-XdQ-fTHSQ629FDERihaZkJsKTjaMnxdg_auu1Nw8BFF27ZI7fhLym5VBjyOWMkXXNKHOSU3gbibzNR84gKt-rNtx1jvwwyOiDY0MgmWYtieBQwIbg6kOxRZzfnmStu4gPWu-O2WvXMDzTJnrOowwOkSaCGdUP_wn67w-t8priiE4tt_8eT_Mx7nl0TwFHYqR3dgihw7B50IS_9NE-w3vBEMl4k0uiE7HA1-CpYuvqvmRsDP7f_3Awg2wWCZBAggxsm7hDXoTT2hswboSs6L243Ex35Yn0P0J0ZEO2r80FCHsKYadoFKx4h5AGZcfWlgK5_ZBxazV-qn2iLioH6NRnxNNR9K_XvxW2U-IHnKBEHO4L1Ad91YoLgXhj_s5VwOzW22EVCCs";
+$melhorEnvio = new \MelhorEnvio\MelhorEnvio($token);
+
+$shipment = new \MelhorEnvio\Entities\Shipment();
+
+$shipment->getFrom()->setPostalCode('75066227');
+$shipment->getTo()->setPostalCode('02125000');
+$shipment->getOptions()->setInsuranceValue(20.50);
+$shipment->getPackage()
+         ->setWeight(1)
+         ->setWidth(12)
+         ->setHeight(4)
+         ->setLength(17);
+$shipment->setServices("1,2");
+
+try {
+    print_r($melhorEnvio->shipments()->calculate($shipment));
+} catch (\GuzzleHttp\Exception\ClientException $ex) {
+    print_r($ex->getMessage());
+}
