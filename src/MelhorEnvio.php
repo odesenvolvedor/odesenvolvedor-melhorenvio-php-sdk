@@ -13,9 +13,9 @@ class MelhorEnvio {
      */
     protected $client;
 
-    public function __construct($token)
+    public function __construct($token, $environment = 'sandbox')
     {
-        $this->client = new Client($token);
+        $this->client = new Client($token, $environment);
     }
 
     public function getClient(): Client
