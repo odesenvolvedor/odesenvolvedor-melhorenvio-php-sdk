@@ -1,8 +1,11 @@
 {
 	"name": "odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
+	"version": "1.0.3",
+	"homepage": "https://github.com/odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
 	"description": "Integração não-oficial com a Melhor Envio",
 	"keywords": ["melhorenvio", "api", "php", "sdk"],
 	"license": "MIT",
+	"type": "library",
 	"authors": [
 		{
 			"name": "Fernando Campos de Oliveira",
