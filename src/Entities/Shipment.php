@@ -6,17 +6,21 @@ class Shipment extends AbstractEntity
 {
 
     /**
-     * @var From
+     * @var From $from
      */
     protected $from;
     /**
-     * @var Option
+     * @var Option $options
      */
     protected $options;
     /**
-     * @var Package
+     * @var Package $package
      */
     protected $package;
+    /**
+     * @var array of Product
+     */
+    protected $products;
     /**
      * @var String
      */
@@ -69,5 +73,43 @@ class Shipment extends AbstractEntity
     public function setTo($to)
     {
         $this->to = $to;
+    }
+
+    /**
+     * Get the value of products
+     *
+     * @return  Product[]
+     */ 
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+     * Set the value of products
+     *
+     * @param  array  $products
+     *
+     * @return  self
+     */ 
+    public function setProducts(array $products)
+    {
+        $this->products = $products;
+
+        return $this;
+    }
+
+    /**
+     * Add products
+     *
+     * @param  Product  $product
+     *
+     * @return  self
+     */ 
+    public function addProduct(Product $product)
+    {
+        $this->products[] = $product;
+
+        return $this;
     }
 }
