@@ -22,132 +22,170 @@ abstract class AbstractFromTo extends AbstractEntity
      protected $note; //String
      
 
-     public function getName() { 
+
+     public function getName()
+     {
          return $this->name;
-    }
-    public function setName($name) { 
+     }
+     public function setName($name)
+     {
          $this->name = $name;
          return $this; 
-    }
+     }
 
-    public function getPhone() { 
+
+
+     public function getPhone()
+     {
          return $this->phone;
-    }
-    public function setPhone($phone) { 
+     }
+     public function setPhone($phone)
+     {
          $this->phone = $phone;
          return $this;
-    }
+     }
 
-    public function getEmail() { 
+    
+     public function getEmail()
+     {
          return $this->email;
-    }
-    public function setEmail($email) { 
+     }
+     public function setEmail($email)
+     {
          $this->email = $email;
          return $this;
-    }
+     }
 
-    public function getDocument() { 
+
+
+     public function getDocument()
+     {
          return $this->document;
-    }
-
-    public function setDocument($document) { 
+     }
+     public function setDocument($document)
+     {
          $this->document = $document;
          return $this;
-    }
+     }
 
-    public function getCompanyDocument() { 
+    
+     public function getCompanyDocument()
+     {
          return $this->company_document;
-    }
-
-    public function setCompanyDocument($company_document) { 
+     }
+     public function setCompanyDocument($company_document)
+     {
          $this->company_document = $company_document;
          return $this;
-    }
+     }
 
-    public function getStateRegister() { 
+    
+     public function getStateRegister()
+     {
          return $this->state_register;
-    }
-    public function setStateRegister($state_register) { 
+     }
+     public function setStateRegister($state_register)
+     {
          $this->state_register = $state_register;
          return $this;
-    }
+     }
 
-    public function getAddress() { 
+    
+     public function getAddress()
+     {
          return $this->address;
-    }
-
-    public function setAddress($address) { 
+     }
+     public function setAddress($address)
+     {
          $this->address = $address;
          return $this;
-    }
+     }
 
-    public function getComplement() { 
+    
+     public function getComplement()
+     {
          return $this->complement;
-    }
-    public function setComplement($complement) { 
+     }
+     public function setComplement($complement)
+     {
          $this->complement = $complement;
          return $this;
-    }
+     }
 
-    public function getNumber() { 
+    
+     public function getNumber()
+     {
          return $this->number;
-    }
-
-    public function setNumber($number) { 
+     }
+     public function setNumber($number)
+     {
          $this->number = $number;
          return $this;
-    }
+     }
 
-    public function getDistrict() { 
+
+     public function getDistrict()
+     {
          return $this->district;
-    }
-
-    public function setDistrict($district) { 
+     }
+     public function setDistrict($district)
+     {
          $this->district = $district;
          return $this;
-    }
+     }
 
-    public function getCity() { 
+
+     public function getCity()
+     {
          return $this->city;
-    }
-
-    public function setCity($city) { 
+     }
+     public function setCity($city)
+     {
          $this->city = $city;
          return $this;
-    }
+     }
 
-    public function getStateAbbr() { 
+    
+     public function getStateAbbr()
+     {
          return $this->state_abbr;
-    }
-
-    public function setStateAbbr($state_abbr) { 
+     }
+     public function setStateAbbr($state_abbr)
+     {
          $this->state_abbr = $state_abbr;
          return $this;
-    }
+     }
 
-    public function getCountryId() { 
+    
+     public function getCountryId()
+     {
          return $this->country_id;
-    }
-    public function setCountryId($country_id) { 
+     }
+     public function setCountryId($country_id)
+     {
          $this->country_id = $country_id;
          return $this;
-    }
+     }
 
-    public function getPostalCode() { 
+    
+     public function getPostalCode()
+     {
          return $this->postal_code;
-    }
-
-    public function setPostalCode($postal_code) { 
+     }
+     public function setPostalCode($postal_code)
+     {
          $this->postal_code = $postal_code;
          return $this;
-    }
+     }
 
-    public function getNote() { 
+    
+     public function getNote()
+     {
          return $this->note;
-    }
-
-    public function setNote($note) { 
+     }
+     public function setNote($note)
+     {
          $this->note = $note;
          return $this;
-    }
+     }
 }

@@ -12,7 +12,7 @@ class Invoice
      * @var string $key
      */
     public $key;
-
+    
 
 
     public function getNumber() 
