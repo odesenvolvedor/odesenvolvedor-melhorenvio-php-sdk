@@ -2,6 +2,8 @@
 
 namespace MelhorEnvio\Services;
 
+use MelhorEnvio\Entities\Cart;
+
 class ShipmentService extends BaseService
 {
     public function calculate(\JsonSerializable $params): ?array
@@ -16,7 +18,7 @@ class ShipmentService extends BaseService
         return $this->client->get('me/cart');
     }
 
-    public function addCartItem(array $params): ?array
+    public function addCartItem(\JsonSerializable $params): ?array
     {
         return $this->client->post('me/cart', [
             'json' => $params

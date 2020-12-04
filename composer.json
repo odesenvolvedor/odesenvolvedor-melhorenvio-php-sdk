@@ -1,6 +1,6 @@
 {
 	"name": "odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"homepage": "https://github.com/odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
 	"description": "Integração não-oficial com a Melhor Envio",
 	"keywords": ["melhorenvio", "api", "php", "sdk"],

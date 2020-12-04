@@ -39,15 +39,17 @@ class Option extends AbstractEntity
 
 
 
-     
+
      /**
           * Class constructor.
           */
      public function __construct()
      {
-          $this->collect = false;
-          $this->own_hand = false;
-          $this->receipt = false;
+          $this->collect           = false;
+          $this->own_hand          = false;
+          $this->receipt           = false;
+          $this->reverse           = false;
+          $this->non_commercial    = false;
      }
 
 

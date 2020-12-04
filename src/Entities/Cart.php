@@ -2,7 +2,7 @@
 
 namespace MelhorEnvio\Entities;
 
-class Cart
+class Cart extends AbstractEntity
 {
     /**
      * @var int $service
@@ -38,7 +38,7 @@ class Cart
     protected $coupon;
 
 
-    
+
 
     public function getService() 
     {

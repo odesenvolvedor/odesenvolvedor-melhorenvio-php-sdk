@@ -9,6 +9,10 @@ class Product extends Package
      */
     protected $id;
     /**
+    * @var string $name
+    */
+    protected $name;
+    /**
      * @var int $quantity
      */
     protected $quantity;
@@ -16,7 +20,11 @@ class Product extends Package
      * @var float $insurance_value
      */
     protected $insurance_value;
-
+    /**
+     * @var float $unitary_value
+     */
+    protected $unitary_value;
+    
 
     /**
      * Get $id
@@ -86,6 +94,54 @@ class Product extends Package
     public function setInsuranceValue(float $insurance_value)
     {
         $this->insurance_value = $insurance_value;
+
+        return $this;
+    }
+
+    /**
+     * Get $name
+     *
+     * @return  string
+     */ 
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set $name
+     *
+     * @param  string  $name  $name
+     *
+     * @return  self
+     */ 
+    public function setName(string $name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get $unitary_value
+     *
+     * @return  float
+     */ 
+    public function getUnitaryValue()
+    {
+        return $this->unitary_value;
+    }
+
+    /**
+     * Set $unitary_value
+     *
+     * @param  float  $unitary_value  $unitary_value
+     *
+     * @return  self
+     */ 
+    public function setUnitaryValue(float $unitary_value)
+    {
+        $this->unitary_value = $unitary_value;
 
         return $this;
     }
