@@ -16,6 +16,7 @@ $shipment->getPackage()
          ->setLength(17);
 $shipment->setServices("1,2");
 
+
 try {
     print_r($melhorEnvio->shipments()->calculate($shipment));
 } catch (\GuzzleHttp\Exception\ClientException $ex) {
