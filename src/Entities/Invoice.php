@@ -2,7 +2,7 @@
 
 namespace MelhorEnvio\Entities;
 
-class Invoice
+class Invoice extends AbstractEntity
 {
     /**
      * @var string $number
