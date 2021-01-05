@@ -35,6 +35,11 @@ class ShipmentService extends BaseService
         return $this->client->delete("me/cart/$id");
     }
 
+    public function balance(): ?array
+    {
+        return $this->client->get('me/balance');
+    }
+
     public function checkoutCart(array $params)
     {
         return $this->client->post('me/shipment/checkout', [

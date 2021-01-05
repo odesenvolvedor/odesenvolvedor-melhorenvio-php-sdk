@@ -1,6 +1,6 @@
 {
 	"name": "odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"homepage": "https://github.com/odesenvolvedor/odesenvolvedor-melhorenvio-php-sdk",
 	"description": "Integração não-oficial com a Melhor Envio",
 	"keywords": ["melhorenvio", "api", "php", "sdk"],
@@ -23,7 +23,7 @@
 		}
 	},
 	"require": {
-		"php": "^7.3",
+		"php": "^7.2",
 		"guzzlehttp/guzzle": "^6.5"
 	},
 	"require-dev": {
